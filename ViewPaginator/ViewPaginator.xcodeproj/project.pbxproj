@@ -15,6 +15,7 @@
 		B72B09121D2B975400F94ADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72B09101D2B975400F94ADD /* LaunchScreen.storyboard */; };
 		B72B091D1D2B975400F94ADD /* ViewPaginatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B72B091C1D2B975400F94ADD /* ViewPaginatorTests.m */; };
 		B72B09281D2B975500F94ADD /* ViewPaginatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B72B09271D2B975500F94ADD /* ViewPaginatorUITests.m */; };
+		B72B09381D2B981200F94ADD /* MPaginatedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B72B09371D2B981200F94ADD /* MPaginatedScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		B72B09231D2B975500F94ADD /* ViewPaginatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewPaginatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72B09271D2B975500F94ADD /* ViewPaginatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewPaginatorUITests.m; sourceTree = "<group>"; };
 		B72B09291D2B975500F94ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B72B09361D2B981200F94ADD /* MPaginatedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPaginatedScrollView.h; sourceTree = "<group>"; };
+		B72B09371D2B981200F94ADD /* MPaginatedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPaginatedScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		B72B08F61D2B975400F94ADD = {
 			isa = PBXGroup;
 			children = (
+				B72B09351D2B97DB00F94ADD /* Custom_ScrollView */,
 				B72B09011D2B975400F94ADD /* ViewPaginator */,
 				B72B091B1D2B975400F94ADD /* ViewPaginatorTests */,
 				B72B09261D2B975500F94ADD /* ViewPaginatorUITests */,
@@ -138,6 +142,15 @@
 				B72B09291D2B975500F94ADD /* Info.plist */,
 			);
 			path = ViewPaginatorUITests;
+			sourceTree = "<group>";
+		};
+		B72B09351D2B97DB00F94ADD /* Custom_ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B72B09361D2B981200F94ADD /* MPaginatedScrollView.h */,
+				B72B09371D2B981200F94ADD /* MPaginatedScrollView.m */,
+			);
+			path = Custom_ScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B72B090A1D2B975400F94ADD /* ViewController.m in Sources */,
+				B72B09381D2B981200F94ADD /* MPaginatedScrollView.m in Sources */,
 				B72B09071D2B975400F94ADD /* AppDelegate.m in Sources */,
 				B72B09041D2B975400F94ADD /* main.m in Sources */,
 			);
@@ -412,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ViewPaginator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Colombia.ViewPaginator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ViewPaginator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Colombia.ViewPaginator;
 				PRODUCT_NAME = "$(TARGET_NAME)";

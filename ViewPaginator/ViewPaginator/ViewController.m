@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "MPaginatedScrollView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet MPaginatedScrollView *scrollView;
 
 @end
 
@@ -16,12 +18,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
+
+#pragma mark - Scroll Datasource - 
+
+-(NSInteger)numberOfPagesInScrollView{
+
+    return 20;
+}
+-(id)viewForScrollViewAtIndex:(NSInteger )index{
+
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
+    if (index%2==0) {
+        [view setBackgroundColor:[UIColor greenColor]];
+    }else{
+        [view setBackgroundColor:[UIColor redColor]];
+    }
+    
+    return view;
+}
+
+
+#pragma mark - Scroll Delegate - 
+
+
+-(void)viewRemoved:(id)view forIndex:(NSInteger)index{
+    
+    NSLog(@"View removed for index %ld",index);
+}
 @end
